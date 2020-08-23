@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="<%= theme.language %>">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="<%= theme.name %>">
+    <meta name="description" content="<%= theme.description %>">
+    <meta name="keywords" content="<%-theme.keywords%>">
+    <title><%= theme.name %></title>
+    <link rel="icon" href="<%= theme.favicon %>">
+    <%- css('css/index.css') %>
+    <link rel="stylesheet" href="<%-theme.fontawesome%>">
+    <link rel="stylesheet" href="<%-theme.iconfont%>">
+    <script src="https://cdn.jsdelivr.net/gh/lete114/CDN/js/jquery.min.js"></script>
+</head>
+<body>
+
+<div class="wrapper">
+    <header>
+        <div style="display:none;float: right; font-size: 20px; margin: 18px 20px;" class="menu-toggle" onclick="mobileBtn()">&#9776;</div>
+        <nav class="navbar" id="navbar">
+            <div class="container">
+                <div style="height: 0%" class="navbar-header header-logo"><a style="font-size: 16px;" href="<%-theme.logo_link%>"><%-theme.logo%></a></div>
+                <div id="menu" class="menu navbar-right mobile-nav">
+                    <% for (var i in theme.menus){ %>
+                    <div id="navlist" class="navlist">
+                        <a  class="menu-item" href="<%- url_for(theme.menus[i]) %>"><%= i %></a>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="main">
+
+        <div class="container">
+            <div class="intro">
+                <div class="avatar">
+                    <a href="/"><img src="<%- theme.avatar%>"></a>
+                </div>
+                <div class="name"><%= theme.name %></div>
+                <div class="description">
+                        <p><%- theme.desc %></p>
+                </div>
+                <div class="links">
+                    <% for (var i in theme.links){ %>
+                    <a class="link-item" href="<%- url_for(theme.links[i]) %>" target="_blank" rel="noopener">
+                        <i class="<%=i%>"></i>
+                    </a>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer" class="footer">
+        <div class="copyright">
+            <%if(theme.ICP.enable == true){%>
+                <a id="icp" href="<%-theme.ICP.url%>" target="_blank" rel="noopener" one-link-mark="yes">
+                    <img style="padding: 0 4px;vertical-align: text-bottom;" src="<%-theme.ICP.icon%>"/><%-theme.ICP.text%></a><br/>
+            <%}%>
+            <span>
+                    <%if(theme.Copyright != null){%>
+                        Copyright © <%= theme.Copyright %> -
+                    <%}else{%>
+                        Copyright © <%= theme.Copyright %>
+                    <%}%>
+                        <span id="time"></span>
+                    <a href="/" target="_blank" one-link-mark="yes"><%= theme.name %>
+                    </a> All Rights Reserved.
+            </span>
+        </div>
+    </footer>
+</div>
+<script>
+    function mobileBtn() {
+        var navbar=document.getElementById("menu");
+        navbar.style.display = menu.style.display=="block"?"":"block";
+    }
+    $(document).ready(function() {var myDate = new Date;var year = myDate.getFullYear();$("#time").html(year);});
+</script>
+</body>
+</html>

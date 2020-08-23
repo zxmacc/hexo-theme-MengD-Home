@@ -1,0 +1,19 @@
+{
+  "name": "hexo-theme-mengd",
+  "version": "1.0.0",
+  "description": "A Simple Design for Hexo Personal HomePage.",
+  "main": "package.json",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "hexo",
+    "theme",
+    "mengd",
+    "Lete",
+    "hexo-theme-mengd",
+    "Personal-HomePage"
+  ],
+  "author": "Lete",
+  "homepage":"https://lete114.top"
+}
