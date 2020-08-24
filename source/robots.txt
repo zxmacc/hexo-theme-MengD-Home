@@ -3,7 +3,7 @@ User-agent: *
 
 # 不允许访问的内容
 Disallow: /archives/
-Disallow: /image/
+Disallow: /img/
 Disallow: /2020/
 Disallow: /2021/
 Disallow: /css/

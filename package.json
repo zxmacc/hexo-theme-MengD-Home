@@ -1,6 +1,6 @@
 {
   "name": "hexo-theme-mengd",
-  "version": "1.0.0",
+  "version": "1.1",
   "description": "A Simple Design for Hexo Personal HomePage.",
   "main": "package.json",
   "scripts": {

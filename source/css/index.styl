@@ -88,9 +88,6 @@ a:hover
   float left
 
 @media screen and (max-width: 800px)
-  .intro
-    transform translateY(10vh) !important
-
   .menu-toggle
     display block !important
 
@@ -171,14 +168,14 @@ a:hover
       -o-transition all 0.3s
       -ms-transition all 0.3s
       transition all 0.3s
+      font-size convert(hexo-config("font_size"))
     i:hover
       -webkit-transform rotate(540deg)
       -moz-transform rotate(540deg)
       -o-transform rotate(540deg)
       -ms-transform rotate(540deg)
       transform rotate(540deg)
-  .iconfont
-    font-size 1.4em
+
 
 
 /*页脚*/

@@ -1,12 +1,10 @@
-<h1 align="center"><a href="https://github.com/lete114/hexo-theme-MengD" target="_blank">MengD.</a></h1>
+<h1 align="center"><a href="https://github.com/lete114/hexo-theme-MengD" target="_blank">MengD.(点)</a></h1>
 
 <img src="https://cdn.jsdelivr.net/gh/lete114/CDN2/img/zaxiang/HomePage.png" alt="Chic theme">
 
 
 ## 介绍
 一个简单的Hexo个人主页设计，能够清晰明了的展现你
-
-基于 [Hexo-Theme-Chic](https://github.com/Siricee/hexo-theme-Chic) 主题首页更改
 
 Demo：[Lete乐特主页](https://lete114.top)
 
@@ -33,7 +31,7 @@ User-agent: *
 
 # 不允许访问的内容
 Disallow: /archives/
-Disallow: /image/
+Disallow: //
 Disallow: /2020/
 Disallow: /2021/
 Disallow: /css/
@@ -64,19 +62,17 @@ desc_color: '#000'
 # bg_img: 'white'
 bg_img: '#fff'
 # 开站年份
-Copyright: 2019
+Copyright: 2020
 
-# 关键字
-keywords: Lete乐特,开发者,程序猿,编程,代码,开源,IT网站,Java,JavaWeb,Java常用框架,Spring,SpringBoot,SpringMVC,MyBatis,数据库,MySQL,C#,.NET,开发工具,Git,GitHub,Gitee,(My)Eclipse,IDEA, Hexo,Linux,Maven,前端基础知识,HTML,CSS,JavaScript,jQuery,Ajax,Bootstrap,工具&#x2F;资源,教程,分享,推荐,娱乐,摄影,C#,CMD,Developer,Programmer,Coder
+#关键字
+keywords: Lete乐特,Java,JavaWeb,Java常用框架,Spring,SpringBoot,SpringMVC,MyBatis,数据库,MySQL,C#,.NET,开发工具,Git,GitHub,Gitee,(My)Eclipse,IDEA, Hexo,Linux,Maven,前端基础知识,HTML,CSS,JavaScript,jQuery,Ajax,Bootstrap,工具&#x2F;资源,教程,分享,推荐,娱乐,摄影,C#,CMD,Developer,Programmer,Coder
 
-# logo
-logo: Lete乐特 's Blog
 
 # favicon 图标
-favicon: /image/favicon.ico
+favicon: /img/favicon.ico
 
 # avatar 头像
-avatar: /image/avatar.png
+avatar: /img/avatar.png
 
 # site description 网站描述
 description: 我相信我可以，但我一直在路上，所以我有无限的可能！！
@@ -84,19 +80,20 @@ description: 我相信我可以，但我一直在路上，所以我有无限的�
 # 个人描述
 desc: 我相信我可以，但我一直在路上，所以我有无限的可能！！<br>人生只有一次，大胆的生活，怎么舒服怎么来！！
 
-# menus 菜单
-menus:
-  MyArticle: https://blog.lete114.top/archives/
-  YiliaBlog: https://yilia.lete114.top/
-  MUSIC: https://music.lete114.top/
-  NavSite: https://nav.lete114.top/
-  Links: https://blog.lete114.top/link/
-  about:  https://blog.lete114.top/about/
-
+# 自定义css js
+# - https://xxx.com/css/css.css
+# - https://xxx.com/js/js.js
+# - css/css.css
+# - js/js.js
+css:
+  - https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css
+#js:
+#  - js/js.js
 
 # 自定义图标
 iconfont: https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@master/butterfly/css/iconfont.min.css
-fontawesome: https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css
+# 图标大小
+font_size: 1.6em
 # Icon 图标
 links:
   iconfont icon-youxiang: mailto:lete@lete114.top
