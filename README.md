@@ -1,6 +1,6 @@
 <h1 align="center"><a href="https://github.com/lete114/hexo-theme-MengD" target="_blank">MengD.(点)</a></h1>
 
-<img src="https://cdn.jsdelivr.net/gh/lete114/CDN2/img/zaxiang/HomePage.png" alt="Chic theme">
+<img src="https://cdn.jsdelivr.net/gh/lete114/hexo-theme-MengD/themes/MengD/source/img/HomePage.png">
 
 
 ## 介绍
@@ -16,9 +16,9 @@ Demo：[Lete乐特主页](https://lete114.top)
 git clone https://github.com/lete114/hexo-theme-MengD.git MengD
 ```
 
-进入`hexo-theme-MengD`执行`npm install hexo --save`
+进入`MengD`执行`npm install hexo --save`和`npm install hexo-deployer-git --save`
 ``` powershell
-cd hexo-theme-MengD
+cd MengD
 npm install hexo --save
 npm install hexo-deployer-git --save
 ```
