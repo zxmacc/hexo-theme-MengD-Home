@@ -20,6 +20,7 @@ git clone https://github.com/lete114/hexo-theme-MengD.git MengD
 ``` powershell
 cd hexo-theme-MengD
 npm install hexo --save
+npm install hexo-deployer-git --save
 ```
 
 相关命令
