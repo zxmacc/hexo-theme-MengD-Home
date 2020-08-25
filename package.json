@@ -1,19 +1,23 @@
 {
-  "name": "hexo-theme-mengd",
-  "version": "1.1",
-  "description": "A Simple Design for Hexo Personal HomePage.",
-  "main": "package.json",
+  "name": "hexo-site",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "test"
+    "build": "hexo generate",
+    "clean": "hexo clean",
+    "deploy": "hexo deploy",
+    "server": "hexo server"
   },
-  "keywords": [
-    "hexo",
-    "theme",
-    "mengd",
-    "Lete",
-    "hexo-theme-mengd",
-    "Personal-HomePage"
-  ],
-  "author": "Lete",
-  "homepage":"https://lete114.top"
+  "hexo": {
+    "version": "5.1.1"
+  },
+  "dependencies": {
+    "hexo": "^5.0.0",
+    "hexo-deployer-git": "^2.1.0",
+    "hexo-generator-index": "^2.0.0",
+    "hexo-renderer-ejs": "^1.0.0",
+    "hexo-renderer-marked": "^3.0.0",
+    "hexo-renderer-stylus": "^2.0.0",
+    "hexo-server": "^2.0.0"
+  }
 }

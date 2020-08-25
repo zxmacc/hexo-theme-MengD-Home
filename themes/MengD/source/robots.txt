@@ -2,8 +2,6 @@
 User-agent: *
 
 # 不允许访问的内容
-Disallow: /archives/
 Disallow: /img/
-Disallow: /2020/
-Disallow: /2021/
+Disallow: /js/
 Disallow: /css/
