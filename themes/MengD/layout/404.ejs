@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="<%= theme.language %>">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="<%= theme.name %>">
+    <meta name="description" content="<%= theme.description %>">
+    <meta name="keywords" content="<%- theme.keywords %>">
+    <title><%= theme.name %> | <%-theme.error_404.text%></title>
+    <link rel="icon" href="<%= theme.favicon %>">
+    <link rel="stylesheet" href="<%- theme.iconfont %>">
+    <%- css('css/index.css') %>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?<%- theme.baidu %>";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body>
+
+<div class="body">
+    <div class="main">
+        <div class="container">
+            <div class="intro">
+                <div class="avatar">
+                    <a href="/"><img src="<%- theme.avatar %>" alt="<%= theme.name %>"></a>
+                </div>
+                <div class="name"><%= theme.name %></div>
+                <div class="error_404">
+                    <p><%- theme.error_404.text %></p>
+
+                    <p><span id="jumpTo">30</span>秒后自动跳转回首页</p>
+                </div>
+                <div class="box">
+                    <button class="homebtn button button--antiman button--round-l button--text-medium" onClick="window.open('/','_self')">返回首页</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%if(theme.music.field=='site' || theme.music.field=='404'){%>
+<audio <%- theme.music.property%>></audio>
+<%}%>
+<script type="text/javascript">
+    var i = <%-theme.error_404.esc %>;
+    function remainTime() {
+        if (i == 0) {
+            location.href = '/';
+        }
+        document.getElementById('jumpTo').innerHTML = i--;
+        setTimeout("remainTime()", 1000);
+    }
+    remainTime();
+</script>
+</body>
+</html>

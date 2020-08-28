@@ -1,24 +1,25 @@
 <h1 align="center"><a href="https://github.com/lete114/hexo-theme-MengD" target="_blank">MengD.(点)</a></h1>
 
-<img src="https://cdn.jsdelivr.net/gh/lete114/hexo-theme-MengD/themes/MengD/source/img/HomePage.png">
+<img src="https://cdn.jsdelivr.net/gh/lete114/CDN2/img/zaxiang/HomePage.png" alt="MengD.(点)">
 
 
 ## 介绍
 一个简单的Hexo个人主页设计，能够清晰明了的展现你
 
-Demo：[Lete乐特主页](https://lete114.top)
+Demo：[https://lete114.top](https://lete114.top)
+
+Docs：[https://blog.lete114.top/article/Hexo-MengD.html](https://blog.lete114.top/article/Hexo-MengD.html)
 
 
 ## 安装
 
 克隆仓库
 ``` powershell
-git clone https://github.com/lete114/hexo-theme-MengD.git MengD
+git clone https://github.com/lete114/hexo-theme-MengD.git MengD-Home
 ```
 
-进入`MengD`执行`npm install hexo --save`和`npm install hexo-deployer-git --save`
+进入`cd MengD-Home`执行下面命令
 ``` powershell
-cd MengD
 npm install hexo --save
 npm install hexo-deployer-git --save
 ```
@@ -86,9 +87,9 @@ desc_color: '#000'
 # bg_img: url(https://cdn.jsdelivr.net/gh/lete114/CDN2/img/wei_er_li_te/3.jpg)
 # bg_img: '#fff'
 # bg_img: 'white'
-bg_img: 'white'
+bg_img: url(https://cdn.jsdelivr.net/gh/lete114/CDN2/img/wei_er_li_te/3.jpg)
 # 开启主页年份
-Copyright: 2020
+Copyright: 2019
 
 #关键字
 keywords: Lete乐特,Java,JavaWeb,Java常用框架,Spring,SpringBoot,SpringMVC,MyBatis,数据库,MySQL,C#,.NET,开发工具,Git,GitHub,Gitee,(My)Eclipse,IDEA, Hexo,Linux,Maven,前端基础知识,HTML,CSS,JavaScript,jQuery,Ajax,Bootstrap,工具&#x2F;资源,教程,分享,推荐,娱乐,摄影,C#,CMD,Developer,Programmer,Coder
@@ -130,15 +131,50 @@ links:
   iconfont icon-lianjie: https://blog.lete114.top/link/
   iconfont icon-csdn: https://me.csdn.net/Lott0419
   iconfont icon-zhihu: https://www.zhihu.com/people/lete114
-  
+
+
+# 音乐
+## site=全局加载音乐
+## home=只有主页加载音乐
+## 404=只有404页面加载音乐
+music:
+  field: 404
+  ### autoplay=自动播放 | loop=循环播放 | controls=显示控件 | muted=静音 | src=音频地址
+  ### 不推荐：controls、muted、preload
+  ### preload=音频在页面加载时进行加载，并预备播放。如果使用 "autoplay"，则忽略该属性
+  property:
+    autoplay
+    loop
+    src="https://656e-env-jxscvzag-1301289878.tcb.qcloud.la/music/zenyang.mp3"
+
+## 404页面
+error_404:
+  # 多少秒后返回首页
+  esc: 30
+  # 读秒字体颜色
+  text_color: '#e58a8a'
+  # 404文字描述
+  text: '404！页面君找不到这个网页！！'
+  # 自定义背景
+  # bg_img: url(https://cdn.jsdelivr.net/gh/lete114/CDN2/img/wei_er_li_te/3.jpg)
+  # bg_img: '#fff'
+  # bg_img: 'white'
+  background: url(https://cdn.jsdelivr.net/gh/lete114/CDN2/img/wei_er_li_te/3.jpg)
+  # 鼠标移到返回首页按钮
+  # 返回首页边框颜色
+  border_color: '#7986cb'
+  # 返回首页字体颜色
+  font_color: '#80bdab'
+
+
 # 百度分析
-baidu: 
+baidu: 05e28fb7xxxxxxxxxxxbf24543fb1
 
 # ICP备案
 ICP:
-  enable: false
+  enable: true
   icon: img/icp.png
-  url: 
-  text: 
+  url: http://www.beian.miit.gov.cn/
+  text:
 ```
 

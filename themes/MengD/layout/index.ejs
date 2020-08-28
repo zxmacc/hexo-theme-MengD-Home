@@ -8,19 +8,19 @@
     <meta name="author" content="<%= theme.name %>">
     <meta name="description" content="<%= theme.description %>">
     <meta name="keywords" content="<%-theme.keywords%>">
-    <title><%= theme.name %></title>
+    <title><%= theme.name %> | <%= theme.description %></title>
     <link rel="icon" href="<%= theme.favicon %>">
     <link rel="stylesheet" href="<%-theme.iconfont%>">
     <%- css('css/index.css') %>
     <script>
         var _hmt = _hmt || [];
         (function() {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?<%- theme.baidu %>";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?<%- theme.baidu %>";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
         })();
-    </script>
+    </script>    
 </head>
 <body>
 <div class="wrapper">
@@ -28,7 +28,7 @@
         <div class="container">
             <div class="intro">
                 <div class="avatar">
-                    <a href="/"><img src="<%- theme.avatar%>"></a>
+                    <a href="/"><img src="<%- theme.avatar%>" alt="<%= theme.name %>"></a>
                 </div>
                 <div class="name"><%= theme.name %></div>
                 <div class="description">
@@ -48,7 +48,7 @@
         <div class="copyright">
             <%if(theme.ICP.enable == true){%>
                 <a id="icp" href="<%-theme.ICP.url%>" target="_blank" rel="noopener" one-link-mark="yes">
-                    <img style="padding: 0 4px;vertical-align: text-bottom;" src="<%-theme.ICP.icon%>"/><%-theme.ICP.text%></a><br/>
+                    <img style="padding: 0 4px;vertical-align: text-bottom;" src="<%-theme.ICP.icon%>" alt="ICP"/><%-theme.ICP.text%></a><br/>
             <%}%>
             <span>Copyright © <span id="time"></span>
                     <a href="/" target="_blank" one-link-mark="yes"><%= theme.name %>
@@ -57,7 +57,9 @@
         </div>
     </footer>
 </div>
-
+<%if(theme.music.field=='site' ||theme.music.field=='home' ){%>
+<audio <%- theme.music.property%>></audio>
+<%}%>
 <script>
         var date = new Date()
         var year = date.getFullYear();
